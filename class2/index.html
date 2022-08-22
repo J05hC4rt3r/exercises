@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 2 Excercise</title>
+</head>
+<body>
+    <ul id="grocery-list-container">
+        
+    </ul>
+
+    <script>
+        const groceryList = [
+         { name: "Apple", price: 5 },
+         { name: "Banana", price: 2 }, 
+         { name: "Cherries", price: 1 },
+         { name: "Dates", price: 7 }   
+        ];
+
+        for (let food of groceryList) {
+            console.log("FOOD:", food);
+
+            const listItem = document.createElement("li");
+
+            listItem.innerText = food.name + ": $" + food.price;
+
+            const foodContainer = document.querySelector("#grocery-list-container")
+
+            foodContainer.appendChild(listItem);
+
+        }
+    </script>
+</body>
+</html>
